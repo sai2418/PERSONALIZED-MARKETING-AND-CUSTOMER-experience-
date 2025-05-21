@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personalization Dashboard</title>
+</head>
+<body>
+    <h2>Welcome to Your Marketing Dashboard</h2>
+    <label>Preferred Categories:</label><input type="text" id="prefs">
+    <button onclick="updatePrefs()">Update</button>
+
+    <script>
+    function updatePrefs() {
+        fetch("/update-preferences/123", {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({preferences: document.getElementById("prefs").value})
+        }).then(res => res.json()).then(data => alert("Preferences updated!"));
+    }
+    </script>
+</body>
+</html>
