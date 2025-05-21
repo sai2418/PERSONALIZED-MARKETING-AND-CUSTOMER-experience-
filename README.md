@@ -47,7 +47,7 @@ Edit
 ## 📌 Getting Started
 
 1. Clone the repository:
-git clone https://github.com/your-username/personalized-marketing.git
+git clone http://127.0.0.1:5000//recommendations//123
 
 javascript
 Copy
